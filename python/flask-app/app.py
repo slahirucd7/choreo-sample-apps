@@ -16,6 +16,7 @@
 
 import json
 import ast
+import time
 from flask import Flask, request
 from types import SimpleNamespace
 app = Flask(__name__)
@@ -44,6 +45,7 @@ def health_check():
 # route relevant to get all reservations
 @app.route('/rs/reservations', methods=['GET'])
 def get_reservations():
+    time.sleep(150)
     return str(json.dumps(reservations))
 
 # gives a reservation created by the user considering the reservationId
