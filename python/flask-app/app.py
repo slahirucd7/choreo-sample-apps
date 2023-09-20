@@ -45,7 +45,7 @@ def health_check():
 # route relevant to get all reservations
 @app.route('/rs/reservations', methods=['GET'])
 def get_reservations():
-    time.sleep(57)
+    time.sleep(120)
     return str(json.dumps(reservations))
 
 # gives a reservation created by the user considering the reservationId
