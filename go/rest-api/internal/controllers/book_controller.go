@@ -67,6 +67,7 @@ func (c *BookController) UpdateBook(ctx context.Context, updatedBook models.Book
 
 func (c *BookController) ListBooks(ctx context.Context) ([]models.Book, error) {
 	books, err := c.bookRepository.List(ctx)
+	fmt.Println("Getting all the books")
 	if err != nil {
 		return nil, makeHttpInternalServerError()
 	}
